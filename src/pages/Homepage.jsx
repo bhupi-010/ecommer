@@ -6,7 +6,7 @@ function HomePage() {
 
   return (
     <div className="container mt-4">
-      <h1>Products</h1>
+      <h1 className="text-start mb-10">Products</h1>
       <div className="row">
         {products.map(product => (
           <div key={product.id} className="col-md-4 mb-4">

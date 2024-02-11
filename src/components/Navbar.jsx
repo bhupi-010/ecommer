@@ -6,7 +6,7 @@ function Navbar() {
 
     return <nav className="navbar navbar-expand sticky-top bg-body-tertiary">
         <div className="container-fluid">
-            <a href="/" className="navbar-brand font-bold">D-Shop</a>
+            <Link className="navbar-brand font-bold" to="/">D-Shop</Link>
             <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
                     <Link className="nav-link" to="/user">
