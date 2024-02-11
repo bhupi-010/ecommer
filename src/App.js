@@ -7,6 +7,7 @@ import User from "./pages/User";
 import Cart from "./pages/Cart";
 import {UserProvider} from "./context/UserContext";
 import {ShopContextProvider} from "./context/ShopContext";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
 
         <Routes>
           <Route path="/"  element={<Homepage/>} />
-          <Route path="/product/:productID" element={<h1>Product_detail</h1>} />
+          <Route path="/product/:productID" element={<ProductDetail/>} />
           <Route path="/user" element={<User/>} />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<h1>Not Found</h1>} />

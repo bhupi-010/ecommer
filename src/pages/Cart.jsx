@@ -4,7 +4,7 @@ import Bill from "../components/Bill";
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateCartQuantity } = useContext(ShopContext);
-
+  const showCart = Object.keys(cartItems).length !== 0;
   const handleChangeQuantity = (id, newQuantity) => {
     updateCartQuantity(id, newQuantity);
   };
@@ -15,8 +15,9 @@ const Cart = () => {
 
   return (
     <div className="container mt-3">
-      <h2 className="text-start">Shopping Cart</h2>
-      <ul className="list-group">
+        {showCart ? <h2 className="text-start">Shopping Cart</h2> : <h2>No items in cart</h2>}
+        <ul className="list-group">
+        {/*  if cart is not empty show car else show nothing*/}
         {Object.entries(cartItems).map(([id, data]) => (
           <li key={id} className="list-group-item d-flex justify-content-between align-items-center">
               <div>

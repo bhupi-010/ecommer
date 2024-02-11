@@ -4,16 +4,18 @@ export const ShopContext = createContext();
 export const ShopContextProvider = (props)=> {
     const [cartItems, setCartItems] = useState({});
 
-    const addToCart = (item) => {
+    const addToCart = (item, qty= 1) => {
+        console.log(item, qty);
         if(cartItems.hasOwnProperty(item.id)){
-       setCartItems((prev) => ({...prev, [item.id]: [prev[item.id][0] + 1, item]}));
+       setCartItems((prev) => ({...prev, [item.id]: [prev[item.id][0] + qty, item]}));
         }
         else {
-            setCartItems((prev) => ({...prev, [item.id]: [1, item]}));
+            setCartItems((prev) => ({...prev, [item.id]: [qty, item]}));
         }
 
     
     }
+
 
     const removeFromCart = (itemID) => {
 
