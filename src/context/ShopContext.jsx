@@ -45,6 +45,10 @@ export const ShopContextProvider = (props) => {
         }
     };
 
+    const removeAllFromCart = () => {
+        setCartItems({});
+    };
+
     return (
         <ShopContext.Provider
             value={{
@@ -53,6 +57,7 @@ export const ShopContextProvider = (props) => {
                 removeFromCart,
                 updateCartQuantity,
                 totalQuantity, 
+                removeAllFromCart
             }}
         >
             {props.children}

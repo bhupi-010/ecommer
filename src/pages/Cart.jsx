@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import Bill from "../components/Bill";
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateCartQuantity } = useContext(ShopContext);
+  const navigate = useNavigate();
   const showCart = Object.keys(cartItems).length !== 0;
   const handleChangeQuantity = (id, newQuantity) => {
     updateCartQuantity(id, newQuantity);
@@ -12,7 +14,9 @@ const Cart = () => {
   const handleRemoveFromCart = (id) => {
     removeFromCart(id);
   }
-
+  const handleCheckout = () => {
+    navigate("/checkout");
+  }
   return (
     <div className="container mt-3">
         {showCart ? <h2 className="text-start">Shopping Cart</h2> : <h2>No items in cart</h2>}
@@ -33,7 +37,8 @@ const Cart = () => {
           </li>
         ))}
       </ul>
-        {<Bill></Bill>}
+        {<Bill />}
+        <button className="btn btn-primary btn-sm ms-2 my-2" onClick={handleCheckout}>Checkout</button>
     </div>
   );
 };

@@ -14,13 +14,13 @@ const Bill = () => {
 
   return (
     <div className="mt-3">
-      <h4 className="text-start">Invoice</h4>
-      {userDetails.name && (
+      {/* {userDetails.name && (
         <div className="text-start">
           <p><strong>Name:</strong> {userDetails.name}</p>
           <p><strong>Address:</strong> {userDetails.address}</p>
+          <p><strong>Email:</strong> {userDetails.email}</p>
         </div>
-      )}
+      )} */}
       <ul className="list-group">
         <li className="list-group-item">Subtotal: ${subtotal.toFixed(2)}</li>
         <li className="list-group-item">Tax (10%): ${tax.toFixed(2)}</li>
