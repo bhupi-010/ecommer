@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useUser } from "../context/UserContext";
-import { Navigate } from "react-router-dom";
+import { Navigate,Link } from "react-router-dom";
 
 const Login = () => {
   const { login, authenticated } = useUser();
@@ -78,6 +78,10 @@ const Login = () => {
                   </div>
                 </div>
               </form>
+              <div className="text-center">
+                <p className="mb-0">Don't have an account?</p>
+                <p className="mb-0">Register <Link to="/register">here</Link>.</p>
+              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 // Register.js
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
@@ -88,6 +89,10 @@ const Register = () => {
                   </div>
                 </div>
               </form>
+              <div className="text-center">
+                <p className="mb-0">already have an account?</p>
+                <p className="mb-0">Login <Link to="/login">here</Link>.</p>
+              </div>
             </div>
           </div>
         </div>
