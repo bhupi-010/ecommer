@@ -21,7 +21,7 @@ const Cart = () => {
         {Object.entries(cartItems).map(([id, data]) => (
           <li key={id} className="list-group-item d-flex justify-content-between align-items-center">
               <div>
-              <img src={data[1].imageUrl} alt="" style={{width: 30, height: 30, marginRight: 5}}/>
+              <img src={data[1].image} alt="" style={{width: 30, height: 30, marginRight: 5}}/>
               {data[1].name} (${data[1].price})
               </div>
             <div>

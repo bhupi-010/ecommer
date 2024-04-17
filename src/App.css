@@ -40,3 +40,25 @@
 .font-bold {
   font-weight: bold;
 }
+
+.product-card {
+  width: 25rem;
+  margin: 10px; /* Add margin to create space between product cards */
+  border: 1px solid #ccc; /* Add border to product cards */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  overflow: hidden; /* Ensure contents don't overflow */
+}
+
+.product-image {
+  padding: 5px;
+  height:200px; /* Set height for the image */
+  width: 50px; /* Ensure the image fills the container */
+  /* Make sure the image covers the entire container */
+}
+
+.description {
+  text-align: left; /* Align the text to the left */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Show ... for overflow text */
+  white-space: nowrap; /* Prevent wrapping */
+}
